@@ -11,6 +11,14 @@ export interface ContestData {
 
 const contestsData: ContestData[] = [
   {
+    place: 16,
+    ctftimeId: 2240,
+    name: 'JerseyCTF IV 2024',
+    ctfPoints: 11128.0,
+    ctftimeRating: 9,799,
+    year: 2024,
+  },
+  {
     place: 8,
     ctftimeId: 2240,
     name: 'WolvCTF 2024',
@@ -55,7 +63,7 @@ const contestsData: ContestData[] = [
   {
     place: 11,
     ctftimeId: 2231,
-    name: 'Pearl CTF',
+    name: 'Pearl CTF 2024',
     ctfPoints: 5809.0,
     ctftimeRating: 13.021,
     year: 2024,
@@ -95,7 +103,7 @@ const contestsData: ContestData[] = [
   {
     place: 18,
     ctftimeId: 2181,
-    name: 'BraekerCTF',
+    name: 'BraekerCTF 2024',
     ctfPoints: 1196.0,
     ctftimeRating: 8.964,
     year: 2024,
