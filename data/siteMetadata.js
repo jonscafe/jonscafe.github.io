@@ -7,9 +7,9 @@ const siteMetadata = {
   theme: 'dark', // system, dark or light
   siteUrl: 'https://serikatnewbie.me',
   siteRepo: 'https://github.com/serikatnewbie',
-  siteLogo: '/static/images/avatar.jpeg',
-  image: '/static/images/avatar.jpeg',
-  socialBanner: '/static/images/twitter-card.png?v=2',
+  siteLogo: '/static/images/avatar.png',
+  image: '/static/images/avatar.png',
+  socialBanner: '',
   email: '',
   github: 'https://github.com/',
   twitter: 'https://twitter.com/',
