@@ -11,6 +11,30 @@ export interface ContestData {
 
 const contestsData: ContestData[] = [
   {
+    place: 5,
+    ctftimeId: 2138,
+    name: 'SwampCTF 2024',
+    ctfPoints: 6041.0,
+    ctftimeRating: 0.0,
+    year: 2024,
+  },
+  {
+    place: 18,
+    ctftimeId: 2291,
+    name: 'RITSEC CTF 2024',
+    ctfPoints: 2890.0,
+    ctftimeRating: 0.0,
+    year: 2024,
+  },
+  {
+    place: 4,
+    ctftimeId: 2297,
+    name: 'UNbreakable International 2024 - Team Phase',
+    ctfPoints: 6944.0,
+    ctftimeRating: 0.0,
+    year: 2024,
+  },
+  {
     place: 16,
     ctftimeId: 2230,
     name: 'JerseyCTF IV 2024',
