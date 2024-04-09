@@ -3,7 +3,7 @@ name: kisanakk
 avatar: /static/images/avatar/player12.webp
 specialties: [Crypto, Mobile]
 member: true
-description: 'Dedicated cryptography enthusiast with a background in mathematics.'
+description: 'Cryptographer and Mobile Exploiter on the Haha Hoho Awikwok Pisan Team'
 order: 12
 ---
 
