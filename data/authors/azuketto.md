@@ -3,7 +3,7 @@ name: azuketto
 avatar: /static/images/avatar/player5.webp
 specialties: [Crypto]
 member: true
-description: 'Cryptographer extraordinaire, continuously exploring new encryption techniques.'
+description: '幸せ'
 order: 5
 ---
 
