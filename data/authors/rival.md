@@ -3,7 +3,7 @@ name: Rival
 avatar: /static/images/avatar/player10.webp
 specialties: [Web]
 member: true
-description: 'Adept web exploitation expert passionate about cybersecurity education.'
+description: 'Web Exploiter from CCUG'
 order: 10
 ---
 
