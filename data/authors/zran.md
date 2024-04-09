@@ -7,4 +7,4 @@ description: 'Hard Carry CP Enjoyer'
 order: 6
 ---
 
-Pwn and Forensics player at CP Enjoyer
+Hard Carry CP Enjoyer
