@@ -1,9 +1,9 @@
 ---
 name: zran
 avatar: /static/images/avatar/player6.webp
-specialties: [Pwn, Forensics]
+specialties: [Pwn, Forensics, Jail]
 member: true
-description: 'Versatile cybersecurity enthusiast specializing in PWN challenges and digital forensics.'
+description: 'Hard Carry CP Enjoyer'
 order: 6
 ---
 
