@@ -23,7 +23,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2291,
     name: 'RITSEC CTF 2024',
     ctfPoints: 2890.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 10.336,
     year: 2024,
   },
   {
