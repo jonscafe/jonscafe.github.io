@@ -11,6 +11,14 @@ export interface ContestData {
 
 const contestsData: ContestData[] = [
   {
+    place: 31,
+    ctftimeId: 2336,
+    name: 'ShunyaCTF Aarambha',
+    ctfPoints: 1563.0,
+    ctftimeRating: 0.0,
+    year: 2024,
+  },
+  {
     place: 26,
     ctftimeId: 2226,
     name: 'AmateursCTF 2024',
@@ -39,7 +47,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2297,
     name: 'UNbreakable International 2024 - Team Phase',
     ctfPoints: 6944.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 	28.242,
     year: 2024,
   },
   {
