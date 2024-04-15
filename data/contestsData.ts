@@ -47,7 +47,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2138,
     name: 'SwampCTF 2024',
     ctfPoints: 6041.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 45.135,
     year: 2024,
   },
   {
