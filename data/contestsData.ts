@@ -15,7 +15,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2254,
     name: 'Space Heroes 2024',
     ctfPoints: 10521.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 34.623.0,
     year: 2024,
   },
   {
