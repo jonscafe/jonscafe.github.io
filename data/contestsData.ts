@@ -11,6 +11,14 @@ export interface ContestData {
 
 const contestsData: ContestData[] = [
   {
+    place: 18,
+    ctftimeId: 2242,
+    name: 'Grey Cat The Flag 2024 Qualifiers',
+    ctfPoints: 5660 .0,
+    ctftimeRating: 0.0,
+    year: 2024,
+  },
+  {
     place: 10,
     ctftimeId: 2316,
     name: 'Incognito 5.0',
