@@ -13,7 +13,7 @@ const contestsData: ContestData[] = [
   {
     place: 18,
     ctftimeId: 2242,
-    name: 'Grey Cat The Flag 2024 Qualifiers',
+    name: 'Grey Cat The Flag 2024',
     ctfPoints: 5660 .0,
     ctftimeRating: 0.0,
     year: 2024,
@@ -79,7 +79,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2297,
     name: 'UNbreakable International 2024 - Team Phase',
     ctfPoints: 6944.0,
-    ctftimeRating: 	28.242,
+    ctftimeRating: 28.242,
     year: 2024,
   },
   {
