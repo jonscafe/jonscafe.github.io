@@ -11,6 +11,14 @@ export interface ContestData {
 
 const contestsData: ContestData[] = [
   {
+    place: 22,
+    ctftimeId: 2339,
+    name: 'CTF@CIT 2024',
+    ctfPoints: 8310.0,
+    ctftimeRating: 0.0,
+    year: 2024,
+  },
+  {
     place: 18,
     ctftimeId: 2242,
     name: 'Grey Cat The Flag 2024 Qualifiers',
@@ -39,7 +47,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2250,
     name: 'b01lers CTF 2024',
     ctfPoints: 7832.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 16.907,
     year: 2024,
   },
   {
@@ -47,7 +55,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2336,
     name: 'ShunyaCTF Aarambha',
     ctfPoints: 1563.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 9.048,
     year: 2024,
   },
   {
