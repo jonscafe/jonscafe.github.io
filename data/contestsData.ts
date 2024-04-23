@@ -23,7 +23,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2242,
     name: 'Grey Cat The Flag 2024 Qualifiers',
     ctfPoints: 5660.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 10.125,
     year: 2024,
   },
   {
