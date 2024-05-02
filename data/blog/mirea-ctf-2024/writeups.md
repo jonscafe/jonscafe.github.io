@@ -3,7 +3,7 @@ title: Mirea CTF 2024 Forensic Writeup
 date: '2024-05-02'
 draft: false
 tags: ['Forensic', 'mirea-ctf-2024']
-summary: nullcon HackIM CTF 2024, Berlin Writeup.
+summary: Mirea CTF 2024 Forensic Writeup
 ---
 
 # MireaCTF 2024 - Quals
