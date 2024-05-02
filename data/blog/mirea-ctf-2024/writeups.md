@@ -1,8 +1,8 @@
 ---
-title: nullcon HackIM CTF 2024, Berlin
-date: '2024-03-22'
+title: Mirea CTF 2024 Forensic Writeup
+date: '2024-05-02'
 draft: false
-tags: ['Web', 'Pwn', 'Misc', 'Crypto', 'nullcon-hackim-ctf-2024']
+tags: ['Forensic', 'mirea-ctf-2024']
 summary: nullcon HackIM CTF 2024, Berlin Writeup.
 ---
 
