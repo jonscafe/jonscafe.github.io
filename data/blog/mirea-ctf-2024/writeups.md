@@ -2,7 +2,7 @@
 title: Mirea CTF 2024 Forensic Writeup
 date: '2024-05-02'
 draft: false
-tags: ['Forensic', 'mirea-ctf-2024']
+tags: ['Forensics', 'mirea-ctf-2024']
 summary: Mirea CTF 2024 Forensic Writeup
 ---
 
