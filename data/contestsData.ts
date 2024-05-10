@@ -23,7 +23,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2367,
     name: 'MireaCTF Quals 2024',
     ctfPoints: 13263.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 18.212,
     year: 2024,
   },
   {
