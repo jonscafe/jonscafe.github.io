@@ -1,5 +1,5 @@
 ---
-name: Kiaara
+name: Agoyy
 avatar: /static/images/avatar/player11.webp
 specialties: [Crypto]
 member: true
