@@ -7,18 +7,24 @@ tags: ['Pwn', 'byu-ctf-2024']
 summary: BYU CTF 2024 Pwn Writeup
 ---
 
-img[alt="chall-sc"] {
+# BYUCTF 2024 Pwn Writeup (Bahasa Indonesia)
+
+<style>
+img[alt=chall-sc] {
   display: block;
   margin: 0 auto;
-  width: 80%; 
+  width: 100em; 
 }
 
 p {
   text-align: justify;
 }
 
+p::first-line {
+  text-indent: 0;
+}
 
-# BYUCTF 2024 Pwn Writeup (Bahasa Indonesia)
+</style>
 
 Solved by: itoid & msfir
 
