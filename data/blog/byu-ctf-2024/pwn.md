@@ -13,7 +13,7 @@ summary: BYU CTF 2024 Pwn Writeup
 img[alt=chall-sc] {
   display: block;
   margin: 0 auto;
-  width: 100em; 
+  width: 80%; 
 }
 
 p {
