@@ -267,7 +267,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     PIE:      PIE enabled
     RUNPATH:  b'.'
 ```
-PIE enabled (Position Independent Executable diaktifkan). Terdapat `Off-by-one` vulnerability di iterasi ke-5 fungsi `v5 = read(0, buf, 0x200uLL);`, jadi kita bisa memanfaatkan kerentanan tersebut untuk melakukan `Execution Flow Hijacking` dengan cara mengoverwrite address instruksi assembly `mov eax, 0` menjadi address fungsi `gargantuan` sehingga program tidak akan langsung exit, namun akan kembali ke fungsi `gargantuan` dan address dari fungsi `gargantuan` akan dileak. 
+PIE enabled (Position Independent Executable diaktifkan). Terdapat `Off-by-one` vulnerability di iterasi kelima fungsi `v5 = read(0, buf, 0x200uLL);`, jadi kita bisa memanfaatkan vulnerability tersebut untuk melakukan `Execution Flow Hijacking` dengan cara mengoverwrite address instruksi assembly `mov eax, 0` menjadi address fungsi `gargantuan` sehingga program tidak akan langsung exit, namun akan kembali ke fungsi `gargantuan` dan address dari fungsi `gargantuan` akan dileak. 
 
 State stack destination sebelum `memcpy(&s[v1], buf, v0);` pada iterasi kelima.
 
