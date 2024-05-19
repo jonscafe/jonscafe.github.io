@@ -490,6 +490,7 @@ sa(b'name: \n', p)
 sla(b'> ', b'4')
 com()
 ```
-![chall-sc](https://hackmd.io/_uploads/BJEnHbwQC.png)
+![chall-sc](https://hackmd.io/_uploads/rknznGwXC.png)
+
 
 
