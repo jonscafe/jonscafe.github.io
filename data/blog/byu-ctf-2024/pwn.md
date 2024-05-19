@@ -68,7 +68,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     Stack:    Executable
     RWX:      Has RWX segments
 ```
-Challenge dari program ini sangat sederhana, dikarenakan stacknya `executable`, jadi cukup leak `stack address` dan masukan shellcode `execve("/bin/sh", 0, 0)` di stack untuk mendapatkan Arbitrary Code Execution. Selain menggunakan cara tersebut, kita juga bisa mengoverwrite Global Offset Table (GOT) dari `printf` menjadi `system` kemudian dilanjutkan dengan mengirim `/bin/sh\0` sebagai byte string sehingga `system('/bin/sh')` akan dieksekusi ketika fungsi `printf` dipanggil. Kita bisa memanfaatkan format string vulnerability di fungsi `printf(buf);` untuk leak address `__libc_start_call_main+128` untuk mendapatkan base address dari libc.
+Challenge dari program ini sangat sederhana, dikarenakan stacknya `executable`, jadi cukup leak `stack address` dan masukan shellcode `execve("/bin/sh", 0, 0)` di stack untuk mendapatkan Arbitrary Code Execution. Selain menggunakan cara tersebut, kita juga bisa mengoverwrite Global Offset Table (GOT) dari `printf` menjadi `system` kemudian dilanjutkan dengan mengirim `/bin/sh\0` sebagai byte string sehingga `system('/bin/sh')` akan dieksekusi ketika fungsi `printf` dipanggil, mengakitbatkan terjadinya `Arbitrary Code Execution`. Kita bisa memanfaatkan format string vulnerability di fungsi `printf(buf);` untuk leak address dari `__libc_start_call_main+128` kemudian menghitung jarak relatif antara base address dari libc dengan address tersebut untuk mendapatkan base address libc.
 
 #### POC
 ```python
