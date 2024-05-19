@@ -9,23 +9,6 @@ summary: BYU CTF 2024 Pwn Writeup
 
 # BYUCTF 2024 Pwn Writeup (Bahasa Indonesia)
 
-<style>
-img[alt=chall-sc] {
-  display: block;
-  margin: 0 auto;
-  width: 80%; 
-}
-
-p {
-  text-align: justify;
-}
-
-p::first-line {
-  text-indent: 0;
-}
-
-</style>
-
 Solved by: itoid & msfir
 
 ## All
