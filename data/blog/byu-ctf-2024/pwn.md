@@ -2,7 +2,7 @@
 title: BYUCTF 2024 Pwn Write-Up
 date: '2024-05-19'
 draft: false
-author: ['itoid']
+authors: ['itoid']
 tags: ['Pwn', 'byu-ctf-2024']
 summary: BYU CTF 2024 Pwn Writeup
 ---
