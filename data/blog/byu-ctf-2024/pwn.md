@@ -269,11 +269,11 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
 ```
 PIE enabled (Position Independent Executable diaktifkan). Terdapat `Off-by-one` vulnerability di iterasi ke-5 fungsi `v5 = read(0, buf, 0x200uLL);`, jadi kita bisa memanfaatkan kerentanan tersebut untuk melakukan `Execution Flow Hijacking` dengan cara mengoverwrite address instruksi assembly `mov eax, 0` menjadi address fungsi `gargantuan` sehingga program tidak akan langsung exit, namun akan kembali ke fungsi `gargantuan` dan address dari fungsi `gargantuan` akan dileak. 
 
-`State pada stack destination sebelum `memcpy(&s[v1], buf, v0);` pada iterasi ke -5`.
+State pada stack destination sebelum `memcpy(&s[v1], buf, v0);` pada iterasi ke -5.
 
 ![chall-sc](https://hackmd.io/_uploads/rk6GgZDmA.png)
 
-`State pada stack destination setelah `memcpy(&s[v1], buf, v0);` pada iterasi ke -5`.
+State pada stack destination setelah `memcpy(&s[v1], buf, v0);` pada iterasi ke -5.
 
 ![chall-sc](https://hackmd.io/_uploads/SkUVeWP7R.png)
 
@@ -455,11 +455,11 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
 ```
 Challenge dari program ini sangat sederhana, cukup overwrite address instruksi assembly `mov eax, 0` dengan address `lea rax, str._bin_sh ` yang terdapat pada fungsi `win` dengan `one-byte overwrite` pada iterasi kesepuluh fungsi `v4[0] = read(0, v2, 0x30uLL);` untuk mendapatkan Arbitrary Code Execution.
 
-State pada stack destination sebelum `memcpy(&v2[20 * v1++ + 264], v2, v4[0]);` pada iterasi kesepuluh`.
+State pada stack destination sebelum `memcpy(&v2[20 * v1++ + 264], v2, v4[0]);` pada iterasi kesepuluh.
 
 ![image](https://hackmd.io/_uploads/HkIAUWPXR.png)
 
-State pada stack destination setelah `memcpy(&v2[20 * v1++ + 264], v2, v4[0]);` pada iterasi kesepuluh`.
+State pada stack destination setelah `memcpy(&v2[20 * v1++ + 264], v2, v4[0]);` pada iterasi kesepuluh.
 
 ![image](https://hackmd.io/_uploads/S151vbw70.png)
 
