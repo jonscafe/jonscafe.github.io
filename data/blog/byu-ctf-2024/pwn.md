@@ -12,7 +12,7 @@ summary: BYU CTF 2024 Pwn Writeup
 Solved by: itoid & msfir
 
 ## All
-![chall-sc](https://hackmd.io/_uploads/Sk01YJv7A.png)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/888f58da-3c3e-4afe-82d8-cf84f41db1db)
 
 Diberikan sebuah zip yang berisi Executable and Linkable Format (ELF) 64-bit beserta Docker Setup untuk mendeploy challengenya di server. Langsung saja kita decompile ELFnya.
 ### main
@@ -77,7 +77,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/ryAKZeDQ0.png)
 
 ## Static
-![chall-sc](https://hackmd.io/_uploads/HylMzgD70.png)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/2f324102-799d-492f-9a02-09715d85d1ee)
 
 
 Diberikan sebuah Executable and Linkable Format (ELF) 64-bit. Langsung saja kita decompile ELFnya.
@@ -134,7 +134,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/HJWKBewX0.png)
 
 ## Numbersss
-![chall-sc](https://hackmd.io/_uploads/SkfXUlD7A.png)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/c1234cd7-066b-4eae-830e-906d0af291d6)
 
 Diberikan sebuah Executable and Linkable Format (ELF) 64-bit dan Dockerfile. Langsung saja kita decompile ELFnya.
 ### main
@@ -213,7 +213,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/r1UtvewmC.png)
 
 ## Gargantuan
-![chall-sc](https://hackmd.io/_uploads/HkTE1Zvm0.png)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/30f2284c-c415-4956-bdb1-d265bf01ec8d)
 
 Diberikan sebuah Executable and Linkable Format (ELF) 64-bit dan libc. Langsung saja kita decompile ELFnya.
 ### main
@@ -345,7 +345,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/B1LF84DmA.png)
 
 ## Directory
-![chall-sc](https://hackmd.io/_uploads/H1EG4Wv7C.png)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/87bb79d5-9a16-4a1b-ba5a-47eb44414851)
 
 Diberikan sebuah zip yang berisi Executable and Linkable Format (ELF) 64-bit beserta Docker Setup untuk mendeploy challengenya di server. Langsung saja kita decompile ELFnya.
 ### main
