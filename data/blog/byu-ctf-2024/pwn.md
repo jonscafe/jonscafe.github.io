@@ -1,10 +1,10 @@
 ---
-title: BYUCTF 2024 Pwn Write-Up
+title: BYUCTF 2024 Pwn Writeup (Bahasa Indonesia)
 date: '2024-05-19'
 draft: false
 authors: ['itoid']
 tags: ['Pwn', 'byu-ctf-2024']
-summary: BYU CTF 2024 Pwn Writeup
+summary: BYUCTF 2024 Pwn Writeup (Bahasa Indonesia)
 ---
 
 # BYUCTF 2024 Pwn Writeup (Bahasa Indonesia)
@@ -51,7 +51,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     Stack:    Executable
     RWX:      Has RWX segments
 ```
-Challenge dari program ini sangat sederhana, dikarenakan stacknya `executable`, jadi cukup leak `stack address` dan masukan shellcode `execve("/bin/sh", 0, 0)` di stack untuk mendapatkan Arbitrary Code Execution. Selain menggunakan cara tersebut, kita juga bisa mengoverwrite Global Offset Table (GOT) dari `printf` menjadi `system` kemudian dilanjutkan dengan mengirim `/bin/sh\0` sebagai byte string sehingga `system('/bin/sh')` akan dieksekusi ketika fungsi `printf` dipanggil, mengakibatkan terjadinya Arbitrary Code Execution. Kita bisa memanfaatkan format string vulnerability di fungsi `printf(buf);` untuk leak address dari `__libc_start_call_main+128` kemudian menghitung jarak relatif antara base address dari libc dengan address tersebut untuk mendapatkan base address libc.
+Challenge dari program ini sangat sederhana, dikarenakan stacknya `executable`, jadi cukup leak `stack address` dan masukan shellcode `execve("/bin/sh", 0, 0)` di stack untuk mendapatkan `Arbitrary Code Execution`. Selain menggunakan cara tersebut, kita juga bisa mengoverwrite `Global Offset Table (GOT)` dari `printf` karena mitigasi programnya `Partial Relocation Read-Only (RELRO)` yang mengakibatkan GOT menjadi writable menjadi `system` dan dilanjutkan dengan mengirim `/bin/sh\0` sebagai byte string sehingga `system('/bin/sh')` akan dieksekusi ketika fungsi `printf` dipanggil, mengakibatkan terjadinya `Arbitrary Code Execution`. Kita bisa memanfaatkan `Format String` vulnerability di fungsi `printf(buf);` untuk leak address dari `__libc_start_call_main+128` kemudian menghitung jarak relatif antara base address dari libc dengan address tersebut untuk mendapatkan base address libc.
 
 #### POC
 ```python
@@ -77,8 +77,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/ryAKZeDQ0.png)
 
 ## Static
-![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/2f324102-799d-492f-9a02-09715d85d1ee)
-
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/a5ae6990-14d1-47d9-b92e-9240a2785e63)
 
 Diberikan sebuah Executable and Linkable Format (ELF) 64-bit. Langsung saja kita decompile ELFnya.
 ### main
@@ -106,7 +105,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     NX:       NX enabled
     PIE:      No PIE (0x400000)
 ```
-Challenge dari program ini sangat sederhana, terdapat buffer overflow vulnerability di fungsi `read(0LL, v1, 256LL)` jadi cukup melakukan Return-Oriented Programming (ROP) Chain `execve("/bin/sh", 0, 0)` dengan `Accumulator Register ($RAX) = 59` dengan instruksi-instruksi assembly yang ada di program tersebut untuk mendapatkan Arbitrary Code Execution.
+Challenge dari program ini sangat sederhana, terdapat `Buffer Overflow` vulnerability di fungsi `read(0LL, v1, 256LL)` jadi cukup melakukan Return-Oriented Programming (ROP) Chain `execve("/bin/sh", 0, 0)` dengan `Accumulator Register ($RAX) = 59` dengan instruksi-instruksi assembly yang ada di program tersebut untuk mendapatkan `Arbitrary Code Execution`.
 
 #### POC
 ```python
@@ -134,7 +133,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/HJWKBewX0.png)
 
 ## Numbersss
-![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/c1234cd7-066b-4eae-830e-906d0af291d6)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/98f9c557-fd93-413b-b5d1-97f90855adc6)
 
 Diberikan sebuah Executable and Linkable Format (ELF) 64-bit dan Dockerfile. Langsung saja kita decompile ELFnya.
 ### main
@@ -178,7 +177,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     NX:       NX enabled
     PIE:      No PIE (0x3fe000)
 ```
-Challenge dari program ini sangat sederhana. Program melakukan pengecekan terhadap variabel `&length`, jika lebih dari 16 maka program akan exit. Terdapat Out-of-Bounds (OOB) vulnerability di fungsi `__isoc99_scanf("%hhd", &length);`. Karena tipe data variabel `&length` adalah `signed char` yang mempunyai range dari `-128 sampai dengan 127`, kita bisa memasukan angka `128` sehingga yang tersimpan pada memori adalah `-128`. Program akan membaca inputan kita dengan `read(0, &v1[counter], 1uLL); (byte by byte)`, jadi cukup melakukan Return-Oriented Programming (ROP) Chain `system('/bin/sh')` dengan tambahan instruksi assembly `ret` karena terdapat `Move Aligned Packed Single-Precision Floating-Point Values (MOVAPS)` di 64-bit ELF, kemudian payloadnya bisa difill dengan sembarang karakter sampai panjang payloadnya 128 untuk mendapatkan Arbitrary Code Execution.
+Challenge dari program ini sangat sederhana. Program melakukan pengecekan terhadap panjang variabel `&length`, jika panjangnya lebih dari 16 maka program akan exit. Terdapat `Out-of-Bounds (OOB)` vulnerability di fungsi `__isoc99_scanf("%hhd", &length);`. Karena tipe data variabel `&length` adalah `signed char` yang mempunyai range dari `-128 sampai dengan 127`, kita bisa memasukan angka `128` sehingga yang tersimpan pada memori adalah `-128`. Program akan membaca inputan kita dengan `read(0, &v1[counter], 1uLL); (byte by byte)`, jadi cukup melakukan Return-Oriented Programming (ROP) Chain `system('/bin/sh')` dengan tambahan instruksi assembly `ret` karena terdapat `Move Aligned Packed Single-Precision Floating-Point Values (MOVAPS)` di 64-bit ELF, kemudian payloadnya bisa difill dengan sembarang karakter sampai panjang payloadnya 128 untuk mendapatkan `Arbitrary Code Execution`.
 
 #### POC
 ```python
@@ -213,7 +212,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/r1UtvewmC.png)
 
 ## Gargantuan
-![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/30f2284c-c415-4956-bdb1-d265bf01ec8d)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/f8aab550-99ce-4f42-824e-86cb2f172221)
 
 Diberikan sebuah Executable and Linkable Format (ELF) 64-bit dan libc. Langsung saja kita decompile ELFnya.
 ### main
@@ -277,7 +276,7 @@ State stack destination setelah `memcpy(&s[v1], buf, v0);` pada iterasi kelima.
 
 ![chall-sc](https://hackmd.io/_uploads/SkUVeWP7R.png)
 
-Setelah itu, kita dapat menghitung jarak relatif base address dari ELF dengan address dari fungsi `gargantuan` untuk mendapatkan base address dari ELF tersebut. Setelah itu, kita dapat melakukan Return-Oriented Programming (ROP) Chain `system('/bin/sh')` untuk mendapatkan Arbitrary Code Execution.
+Kita dapat menghitung jarak relatif base address dari ELF dengan address dari fungsi `gargantuan` untuk mendapatkan base address dari ELF tersebut. Setelah itu, kita dapat melakukan Return-Oriented Programming (ROP) Chain untuk leak address libc.sym.puts melalui `Procedure Linkage Table (PLT)` fungsi `puts`, dan melakukan Return-Oriented Programming (ROP) Chain kembali untuk memanggil `system('/bin/sh')` yang mengakibatkan `Arbitrary Code Execution`.
 
 
 #### POC
@@ -345,7 +344,7 @@ com()
 ![chall-sc](https://hackmd.io/_uploads/B1LF84DmA.png)
 
 ## Directory
-![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/87bb79d5-9a16-4a1b-ba5a-47eb44414851)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/dce01d71-16b1-4a98-9cb4-b26d8cd4ed88)
 
 Diberikan sebuah zip yang berisi Executable and Linkable Format (ELF) 64-bit beserta Docker Setup untuk mendeploy challengenya di server. Langsung saja kita decompile ELFnya.
 ### main
@@ -453,7 +452,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     NX:       NX enabled
     PIE:      PIE enabled
 ```
-Challenge dari program ini sangat sederhana, cukup overwrite address instruksi assembly `mov eax, 0` dengan address `lea rax, str._bin_sh ` yang terdapat pada fungsi `win` dengan `one-byte overwrite` pada iterasi kesepuluh fungsi `v4[0] = read(0, v2, 0x30uLL);` untuk mendapatkan Arbitrary Code Execution.
+Challenge dari program ini sangat sederhana, cukup overwrite address instruksi assembly `mov eax, 0` dengan address instruksi assembly `lea rax, str._bin_sh ` yang terdapat pada fungsi `win` dengan `one-byte overwrite` pada iterasi kesepuluh fungsi `v4[0] = read(0, v2, 0x30uLL);` untuk mendapatkan `Arbitrary Code Execution`.
 
 State stack destination sebelum `memcpy(&v2[20 * v1++ + 264], v2, v4[0]);` pada iterasi kesepuluh.
 
@@ -491,6 +490,3 @@ sla(b'> ', b'4')
 com()
 ```
 ![chall-sc](https://hackmd.io/_uploads/rknznGwXC.png)
-
-
-
