@@ -454,7 +454,7 @@ Mari kita cek mitigasi yang ada di program tersebut dengan command `checksec`.
     NX:       NX enabled
     PIE:      PIE enabled
 ```
-Challenge dari program ini sangat sederhana, cukup overwrite address instruksi assembly `mov eax, 0` dengan address instruksi assembly `lea rax, str._bin_sh ` yang terdapat pada fungsi `win` dengan `one-byte overwrite` pada iterasi kesepuluh fungsi `v4[0] = read(0, v2, 0x30uLL);` untuk mendapatkan `Arbitrary Code Execution`.
+Challenge dari program ini sangat sederhana, cukup overwrite address instruksi assembly `mov eax, 0` dengan address instruksi assembly `lea rax, str._bin_sh` yang terdapat pada fungsi `win` dengan `one-byte overwrite` pada iterasi kesepuluh fungsi `v4[0] = read(0, v2, 0x30uLL);` untuk mendapatkan `Arbitrary Code Execution`.
 
 State stack destination sebelum `memcpy(&v2[20 * v1++ + 264], v2, v4[0]);` pada iterasi kesepuluh.
 
