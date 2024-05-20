@@ -489,4 +489,4 @@ sa(b'name: \n', p)
 sla(b'> ', b'4')
 com()
 ```
-![chall-sc](https://hackmd.io/_uploads/rknznGwXC.png)
+![chall-sc](https://github.com/jonscafe/jonscafe.github.io/assets/118645827/b80e886c-b208-4403-91f8-9e9275e93619)
