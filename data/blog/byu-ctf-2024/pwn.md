@@ -278,7 +278,7 @@ State stack destination setelah `memcpy(&s[v1], buf, v0);` pada iterasi kelima.
 
 ![chall-sc](https://hackmd.io/_uploads/SkUVeWP7R.png)
 
-Kita dapat menghitung jarak relatif base address dari ELF dengan address dari fungsi `gargantuan` untuk mendapatkan base address dari ELF tersebut. Setelah itu, kita dapat melakukan Return-Oriented Programming (ROP) Chain untuk leak address libc.sym.puts melalui `Procedure Linkage Table (PLT)` fungsi `puts`, dan melakukan Return-Oriented Programming (ROP) Chain kembali untuk memanggil `system('/bin/sh')` yang mengakibatkan `Arbitrary Code Execution`.
+Kita dapat menghitung jarak relatif base address dari ELF dengan address dari fungsi `gargantuan` untuk mendapatkan base address dari ELF tersebut. Setelah itu, kita dapat melakukan Return-Oriented Programming (ROP) Chain untuk leak address `libc.sym.puts` melalui `Procedure Linkage Table (PLT)` fungsi `puts`, dan melakukan Return-Oriented Programming (ROP) Chain kembali untuk memanggil `system('/bin/sh')` yang mengakibatkan `Arbitrary Code Execution`.
 
 
 #### POC
