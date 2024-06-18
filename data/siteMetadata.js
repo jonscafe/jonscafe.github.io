@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'SNI',
   author: 'Serikat Newbie Indonesia',
   headerTitle: 'SNI',
-  description: 'SNI CTF Team',
+  description: 'Ora CTF, yo sakau',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://serikatnewbie.me',
@@ -15,7 +15,7 @@ const siteMetadata = {
   twitter: 'https://twitter.com/',
   facebook: '',
   youtube: '',
-  linkedin: 'https://www.linkedin.com/',
+  linkedin: 'https://www.linkedin.com/company/serikatnewbie-id/',
   ctftime: 'https://ctftime.org/team/279998',
   discord: '',
   locale: 'en-US',
