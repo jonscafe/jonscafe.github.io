@@ -20,7 +20,7 @@ Given an iso file, just mount it.
 
 ### <a name="_wynt714o4o3i"></a>**for-surveillance-of-sus**
 
-Given .bin cache file. Upon examining with HxD, found out that it was a RDP BMP file (RDP BMP Cache File). So i use bmc-tools to parse it (<https://github.com/ANSSI-FR/bmc-tools/>)
+Given .bin cache file. Upon examining with HxD, found out that it was a RDP BMP file (RDP BMP Cache File). So i use bmc-tools to parse it (https://github.com/ANSSI-FR/bmc-tools/)
 ![image](https://hackmd.io/_uploads/H1v65qBIC.png)
 
 ### <a name="_r9ddak6eu3hr"></a>**for-mem-search**
@@ -33,7 +33,7 @@ I examine the file and notice it was a poweshell script that do something on the
 
 ### <a name="_keiihphvzm02"></a>**for-tiny-10px**
 
-Given jpg file with 10x10 pixel size, i try to extract the colors from it but found nothing so i try to do something with it size chunk (<https://cyberhacktics.com/hiding-information-by-changing-an-images-height/>)
+Given jpg file with 10x10 pixel size, i try to extract the colors from it but found nothing so i try to do something with it size chunk (https://cyberhacktics.com/hiding-information-by-changing-an-images-height/)
 ![image](https://hackmd.io/_uploads/S1Tks5SUR.png)
 
 Flag{b1g_en0ugh} -> i guess it and it was correct
@@ -47,14 +47,14 @@ Just some regular qr fixing
 ### <a name="_o7s77oqjxqme"></a>**for-streamer**
 
 Given pcap file. And notice it contains RTP Packets.
-<https://en.wikipedia.org/wiki/Real-time_Transport_Protocol>
+(https://en.wikipedia.org/wiki/Real-time_Transport_Protocol)
 ![image](https://hackmd.io/_uploads/SkOZoqBIR.png)
 RTP Packets is used to do transfer file when streaming. So we need to extract the video (the description said it use H264 encoding).
 
-H264 RTP Payload type is 96, so i set it (<https://stackoverflow.com/questions/26164442/decoding-rtp-payload-as-h264-using-wireshark>)
+H264 RTP Payload type is 96, so i set it (https://stackoverflow.com/questions/26164442/decoding-rtp-payload-as-h264-using-wireshark)
 ![image](https://hackmd.io/_uploads/Hyqmj5BUC.png)
 
-Using h264 extractor plugin, i can extract it (<https://github.com/volvet/h264extractor/tree/master>).
+Using h264 extractor plugin, i can extract it (https://github.com/volvet/h264extractor/tree/master).
 The video stream is at udp port 59974. The other one is audio stream.
 ![image](https://hackmd.io/_uploads/SyWEjqB8A.png)
 ![image](https://hackmd.io/_uploads/rkw4icBIA.png)
