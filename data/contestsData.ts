@@ -27,6 +27,14 @@ const contestsData: ContestData[] = [
     year: 2024,
   },
   {
+    place: 7,
+    ctftimeId: 2330,
+    name: 'DSTA CDDC BrainHack 2024, Singapore',
+    ctfPoints: 0,
+    ctftimeRating: 0,
+    year: 2024,
+  },
+  {
     place: 34,
     ctftimeId: 2321,
     name: 'TJCTF 2024',
@@ -307,15 +315,7 @@ const contestsData: ContestData[] = [
     ctfPoints: 32.0,
     ctftimeRating: 1.542,
     year: 2024,
-  },
-  {
-    place: 7,
-    ctftimeId: 2330,
-    name: 'DSTA CDDC BrainHack 2024, Singapore',
-    ctfPoints: 0,
-    ctftimeRating: 0,
-    year: 2024,
-  },
+  }
 ]
 
 export default contestsData
