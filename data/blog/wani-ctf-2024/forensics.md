@@ -36,7 +36,7 @@ I examine the file and notice it was a poweshell script that do something on the
 Given jpg file with 10x10 pixel size, i try to extract the colors from it but found nothing so i try to do something with it size chunk (https://cyberhacktics.com/hiding-information-by-changing-an-images-height/)
 ![image](https://hackmd.io/_uploads/S1Tks5SUR.png)
 
-Flag{b1g_en0ugh} -> i guess it and it was correct
+`Flag{b1g_en0ugh}` -> i guess it and it was correct
 
 ### <a name="_sbwj7l2ppiv9"></a>**For-codebreaker**
 
