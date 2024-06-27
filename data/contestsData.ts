@@ -15,7 +15,7 @@ const contestsData: ContestData[] = [
     ctftimeId: 2377,
     name: 'Wani CTF 2024',
     ctfPoints: 4817.0,
-    ctftimeRating: 0.0,
+    ctftimeRating: 19.732,
     year: 2024,
   },  
   {
